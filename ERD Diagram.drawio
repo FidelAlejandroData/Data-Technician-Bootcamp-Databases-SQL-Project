@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Z0eE0jLDO23Vxl6v3Uig">
+    <mxGraphModel dx="1360" dy="744" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Student" vertex="1">
+          <mxGeometry height="90" width="180" x="80" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="2" style="shape=tableRow;horizontal=1;startSize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="id (PK)" vertex="1">
+          <mxGeometry height="30" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="2" style="shape=tableRow;horizontal=1;startSize=0;fillColor=default;strokeColor=#6c8ebf;" value="name" vertex="1">
+          <mxGeometry height="30" width="180" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fillColor=#d5e8d4;strokeColor=#82b366;" value="Class" vertex="1">
+          <mxGeometry height="90" width="180" x="560" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="5" style="shape=tableRow;horizontal=1;startSize=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="class_id (PK)" vertex="1">
+          <mxGeometry height="30" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="5" style="shape=tableRow;horizontal=1;startSize=0;fillColor=default;strokeColor=#82b366;" value="class_name" vertex="1">
+          <mxGeometry height="30" width="180" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fillColor=#ffe6cc;strokeColor=#d6b656;" value="Results" vertex="1">
+          <mxGeometry height="150" width="180" x="340" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="8" style="shape=tableRow;horizontal=1;startSize=0;fillColor=#ffe6cc;strokeColor=#d6b656;" value="result_id (PK)" vertex="1">
+          <mxGeometry height="30" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="8" style="shape=tableRow;horizontal=1;startSize=0;fillColor=default;strokeColor=#d6b656;" value="student_id (FK)" vertex="1">
+          <mxGeometry height="30" width="180" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="8" style="shape=tableRow;horizontal=1;startSize=0;fillColor=default;strokeColor=#d6b656;" value="class_id (FK)" vertex="1">
+          <mxGeometry height="30" width="180" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="8" style="shape=tableRow;horizontal=1;startSize=0;fillColor=default;strokeColor=#d6b656;" value="mark" vertex="1">
+          <mxGeometry height="30" width="180" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="3" target="10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="6" target="11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
