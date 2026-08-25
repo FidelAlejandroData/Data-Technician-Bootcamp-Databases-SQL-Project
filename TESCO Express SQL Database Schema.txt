@@ -1,0 +1,164 @@
+-- =========================
+-- DATE DIMENSION
+-- =========================
+
+CREATE TABLE dim_date (
+    date_key INT PRIMARY KEY,
+    full_date DATE NOT NULL,
+    day INT NOT NULL,
+    month INT NOT NULL,
+    year INT NOT NULL,
+    month_name VARCHAR(20) NOT NULL,
+    quarter INT NOT NULL,
+
+    CHECK (day BETWEEN 1 AND 31),
+    CHECK (month BETWEEN 1 AND 12),
+    CHECK (quarter BETWEEN 1 AND 4)
+);
+
+
+-- =========================
+-- SUPPLIER DIMENSION
+-- =========================
+
+CREATE TABLE dim_supplier (
+    supplier_key INT PRIMARY KEY,
+    supplier_id VARCHAR(10) UNIQUE NOT NULL,
+    supplier_name VARCHAR(100) NOT NULL,
+    contact_details VARCHAR(255) NOT NULL
+);
+
+
+-- =========================
+-- CUSTOMER DIMENSION
+-- =========================
+
+CREATE TABLE dim_customer (
+    customer_key INT PRIMARY KEY,
+    customer_id VARCHAR(10) UNIQUE NOT NULL,
+    customer_name VARCHAR(100) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    contact_number VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    membership_number VARCHAR(15) UNIQUE NOT NULL,
+    membership_status VARCHAR(20) NOT NULL,
+
+    CHECK (membership_status IN ('Gold','Silver','Bronze'))
+);
+
+
+-- =========================
+-- PRODUCT DIMENSION
+-- =========================
+
+CREATE TABLE dim_product (
+    product_key INT PRIMARY KEY,
+    product_id VARCHAR(10) UNIQUE NOT NULL,
+    product_name VARCHAR(255) NOT NULL,
+    category VARCHAR(100) NOT NULL,
+    unit_of_measure VARCHAR(20) NOT NULL,
+    supplier_key INT NOT NULL,
+
+    FOREIGN KEY (supplier_key)
+        REFERENCES dim_supplier(supplier_key)
+);
+
+
+-- =========================
+-- INVENTORY TABLE
+-- =========================
+
+CREATE TABLE inventory (
+    inventory_key INT PRIMARY KEY,
+    product_key INT NOT NULL,
+    stock_quantity INT NOT NULL,
+    reorder_level INT NOT NULL,
+    last_updated DATE NOT NULL,
+
+    FOREIGN KEY (product_key)
+        REFERENCES dim_product(product_key),
+
+    CHECK (stock_quantity >= 0),
+    CHECK (reorder_level >= 0)
+);
+
+
+-- =========================
+-- SALES FACT TABLE
+-- =========================
+
+CREATE TABLE fact_sales (
+    sales_key INT PRIMARY KEY,
+    date_key INT NOT NULL,
+    customer_key INT NOT NULL,
+    product_key INT NOT NULL,
+
+    quantity INT NOT NULL,
+    unit_price DECIMAL(10,2) NOT NULL,
+    line_total DECIMAL(10,2) NOT NULL,
+
+    FOREIGN KEY (date_key)
+        REFERENCES dim_date(date_key),
+
+    FOREIGN KEY (customer_key)
+        REFERENCES dim_customer(customer_key),
+
+    FOREIGN KEY (product_key)
+        REFERENCES dim_product(product_key),
+
+    CHECK (quantity > 0),
+    CHECK (unit_price >= 0),
+    CHECK (line_total >= 0)
+);
+
+
+-- =========================
+-- COST FACT TABLE
+-- =========================
+
+CREATE TABLE fact_cost (
+    cost_key INT PRIMARY KEY,
+    date_key INT NOT NULL,
+    product_key INT NOT NULL,
+    supplier_key INT NOT NULL,
+
+    quantity INT NOT NULL,
+    unit_cost DECIMAL(10,2) NOT NULL,
+    total_cost DECIMAL(10,2) NOT NULL,
+
+    FOREIGN KEY (date_key)
+        REFERENCES dim_date(date_key),
+
+    FOREIGN KEY (product_key)
+        REFERENCES dim_product(product_key),
+
+    FOREIGN KEY (supplier_key)
+        REFERENCES dim_supplier(supplier_key),
+
+    CHECK (quantity > 0),
+    CHECK (unit_cost >= 0),
+    CHECK (total_cost >= 0)
+);
+
+
+-- =========================
+-- LOYALTY TRANSACTIONS
+-- =========================
+
+CREATE TABLE loyalty_transactions (
+    loyalty_key INT PRIMARY KEY,
+    customer_key INT NOT NULL,
+    date_key INT NOT NULL,
+
+    points_earned INT DEFAULT 0,
+    points_redeemed INT DEFAULT 0,
+
+    FOREIGN KEY (customer_key)
+        REFERENCES dim_customer(customer_key),
+
+    FOREIGN KEY (date_key)
+        REFERENCES dim_date(date_key),
+
+    CHECK (points_earned >= 0),
+    CHECK (points_redeemed >= 0)
+);
