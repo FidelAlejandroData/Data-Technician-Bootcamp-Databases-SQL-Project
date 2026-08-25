@@ -137,7 +137,7 @@ erDiagram
     }
 ```
 
-This helped me understand how primary and foreign keys connect information stored across different tables.
+This helped me understand how primary and foreign keys are used to connect information across different tables. The following diagram illustrates the galaxy schema I created:
 
 <img width="640" height="741" alt="image" src="https://github.com/user-attachments/assets/6d6ac0c5-88d6-4cdb-b370-7dd8b6522677" />
 
