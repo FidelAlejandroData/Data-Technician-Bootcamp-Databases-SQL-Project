@@ -1,0 +1,226 @@
+DROP TABLE IF EXISTS world_combined_30; 
+CREATE TABLE world_combined_30 ( 
+    row_id integer PRIMARY KEY, 
+    country_code text NOT NULL, 
+    country_name text NOT NULL, 
+    country_population bigint NOT NULL, 
+    city_id integer NOT NULL, 
+    city_name text NOT NULL, 
+    language text NOT NULL, 
+    is_official boolean NOT NULL, 
+    language_percentage numeric(5,1) NOT NULL 
+); 
+
+INSERT INTO world_combined_30 ( 
+    row_id, 
+    country_code, 
+    country_name, 
+    country_population, 
+    city_id, 
+    city_name, 
+    language, 
+    is_official, 
+    language_percentage 
+) VALUES 
+(1, 'ABW', 'Aruba', 103000, 1001, 'Oranjestad', 'Dutch', TRUE, 5.3), 
+(2, 'ABW', 'Aruba', 103000, 1002, 'Oranjestad', 'English', FALSE, 9.5), 
+(3, 'ABW', 'Aruba', 103000, 1003, 'Oranjestad', 'Papiamento', FALSE, 76.7), 
+(4, 'ABW', 'Aruba', 103000, 1004, 'Oranjestad', 'Spanish', FALSE, 7.4), 
+(5, 'AFG', 'Afghanistan', 22720000, 1005, 'Kabul', 'Balochi', FALSE, 0.9), 
+(6, 'AFG', 'Afghanistan', 22720000, 1006, 'Kabul', 'Dari', TRUE, 32.1), 
+(7, 'AFG', 'Afghanistan', 22720000, 1007, 'Kabul', 'Pashto', TRUE, 52.4), 
+(8, 'AFG', 'Afghanistan', 22720000, 1008, 'Kabul', 'Turkmenian', FALSE, 1.9), 
+(9, 'AFG', 'Afghanistan', 22720000, 1009, 'Kabul', 'Uzbek', FALSE, 8.8), 
+(10, 'AGO', 'Angola', 12878000, 1010, 'Luanda', 'Ambo', FALSE, 2.4), 
+(11, 'AGO', 'Angola', 12878000, 1011, 'Luanda', 'Chokwe', FALSE, 4.2), 
+(12, 'AGO', 'Angola', 12878000, 1012, 'Luanda', 'Kongo', FALSE, 13.2), 
+(13, 'AGO', 'Angola', 12878000, 1013, 'Luanda', 'Luchazi', FALSE, 2.4), 
+(14, 'AGO', 'Angola', 12878000, 1014, 'Luanda', 'Luimbe-nganguela', FALSE, 5.4), 
+(15, 'AGO', 'Angola', 12878000, 1015, 'Luanda', 'Luvale', FALSE, 3.6), 
+(16, 'AGO', 'Angola', 12878000, 1016, 'Luanda', 'Mbundu', FALSE, 21.6), 
+(17, 'AGO', 'Angola', 12878000, 1017, 'Luanda', 'Nyaneka-nkhumbi', FALSE, 5.4), 
+(18, 'AGO', 'Angola', 12878000, 1018, 'Luanda', 'Ovimbundu', FALSE, 37.2), 
+(19, 'AIA', 'Anguilla', 8000, 1019, 'The Valley', 'English', TRUE, 0.0), 
+(20, 'ALB', 'Albania', 3401200, 1020, 'Tirana', 'Albaniana', TRUE, 97.9), 
+(21, 'ALB', 'Albania', 3401200, 1021, 'Tirana', 'Greek', FALSE, 1.8), 
+(22, 'ALB', 'Albania', 3401200, 1022, 'Tirana', 'Macedonian', FALSE, 0.1), 
+(23, 'AND', 'Andorra', 78000, 1023, 'Andorra la Vella', 'Catalan', TRUE, 32.3), 
+(24, 'AND', 'Andorra', 78000, 1024, 'Andorra la Vella', 'French', FALSE, 6.2), 
+(25, 'AND', 'Andorra', 78000, 1025, 'Andorra la Vella', 'Portuguese', FALSE, 10.8), 
+(26, 'AND', 'Andorra', 78000, 1026, 'Andorra la Vella', 'Spanish', FALSE, 44.6), 
+(27, 'ANT', 'Netherlands Antilles', 217000, 1027, 'Willemstad', 'Dutch', TRUE, 0.0), 
+(28, 'ANT', 'Netherlands Antilles', 217000, 1028, 'Willemstad', 'English', FALSE, 7.8), 
+(29, 'ANT', 'Netherlands Antilles', 217000, 1029, 'Willemstad', 'Papiamento', TRUE, 86.2), 
+(30, 'ARE', 'United Arab Emirates', 2441000, 1030, 'Abu Dhabi', 'Arabic', TRUE, 42.0); 
+
+SELECT * 
+FROM world_combined_30; 
+
+SELECT *  
+FROM World_combined_30; 
+
+SELECT * 
+FROM world_combined_30 
+WHERE country_code = 'ANT'; 
+
+SELECT * 
+FROM world_combined_30 
+WHERE country_name = 'Afghanistan'; 
+
+SELECT language, 
+       is_official, 
+       language_percentage 
+FROM world_combined_30 
+WHERE country_name = 'Aruba'; 
+
+SELECT city_name, 
+       country_code 
+FROM world_combined_30; 
+
+SELECT country_name, 
+       language, 
+       language_percentage 
+FROM world_combined_30 
+WHERE is_official = TRUE; 
+
+SELECT DISTINCT country_name, 
+       country_population 
+FROM world_combined_30 
+WHERE country_population > 10000000; 
+
+SELECT country_name, 
+       language, 
+       language_percentage 
+FROM world_combined_30 
+WHERE language_percentage > 40.0; 
+
+SELECT DISTINCT country_name
+FROM world_combined_30;
+
+SELECT language, 
+       language_percentage 
+FROM world_combined_30 
+WHERE country_name = 'Angola' 
+ORDER BY language_percentage DESC;
+
+SELECT DISTINCT country_name,
+country_code
+FROM world_combined_30
+WHERE language = 'English';
+
+SELECT language, 
+       language_percentage 
+FROM world_combined_30 
+WHERE country_name = 'Albania' 
+AND is_official = FALSE;
+
+SELECT DISTINCT country_name, 
+       country_population 
+FROM world_combined_30 
+WHERE country_population BETWEEN 100000 AND 3000000 
+ORDER BY country_population;
+
+SELECT country_name, 
+       COUNT(*) AS language_count 
+FROM world_combined_30 
+GROUP BY country_name 
+ORDER BY language_count DESC;
+
+SELECT country_name, 
+       MAX(language_percentage) AS max_language_percentage 
+FROM world_combined_30 
+GROUP BY country_name 
+ORDER BY max_language_percentage DESC;
+
+SELECT DISTINCT country_name 
+FROM world_combined_30 
+WHERE language_percentage > 50;
+
+SELECT country_name, 
+       SUM(language_percentage) AS total_official_percentage 
+FROM world_combined_30 
+WHERE is_official = TRUE 
+GROUP BY country_name 
+ORDER BY total_official_percentage DESC;
+
+SELECT country_name, 
+
+       COUNT(*) AS official_language_count 
+
+FROM world_combined_30 
+WHERE is_official = TRUE 
+GROUP BY country_name 
+HAVING COUNT(*) > 1 
+ORDER BY official_language_count DESC;
+
+SELECT country_name, 
+       language, 
+       language_percentage 
+FROM world_combined_30 
+WHERE is_official = TRUE 
+  AND language_percentage < 10;
+
+SELECT country_name, 
+       country_code, 
+       language_percentage 
+FROM world_combined_30 
+WHERE language = 'Arabic' 
+  AND is_official = TRUE;
+
+SELECT country_name, 
+       COUNT(*) AS non_official_count 
+FROM world_combined_30 
+WHERE is_official = FALSE   
+GROUP BY country_name 
+ORDER BY non_official_count DESC;
+
+SELECT * 
+FROM world_combined_30 
+WHERE city_name LIKE '%la%';
+
+SELECT country_name 
+FROM world_combined_30 
+WHERE language_percentage = ( 
+    SELECT MAX(w2.language_percentage) 
+    FROM world_combined_30 AS w2 
+    WHERE w2.country_name = world_combined_30.country_name 
+) 
+AND is_official = FALSE;
+
+SELECT DISTINCT country_name, 
+
+       country_population 
+
+FROM world_combined_30 
+WHERE country_population > 
+      ( 
+        SELECT AVG(country_population) 
+        FROM world_combined_30 
+      );
+
+SELECT DISTINCT language, 
+       country_name, 
+       language_percentage 
+FROM world_combined_30 
+WHERE is_official = TRUE 
+  AND language_percentage >= 40 
+ORDER BY language;
+
+SELECT country_name, 
+       SUM(language_percentage) AS total_language_share 
+FROM world_combined_30 
+GROUP BY country_name 
+HAVING SUM(language_percentage) < 100 
+ORDER BY total_language_share;
+
+SELECT * 
+
+FROM world_combined_30 AS w 
+
+WHERE country_name IN ( 
+
+SELECT country_name 
+    FROM world_combined_30 
+    GROUP BY country_name 
+    HAVING COUNT(*) > 5 
+); 
