@@ -82,7 +82,7 @@ I developed an understanding of:
 * One-to-one relationships
 * One-to-many relationships
 * Many-to-many relationships
-* Entity Relationship Diagrams
+* Entity Relationship Diagrams and Schemas
 
 ## 📈 Key Project Activities
 
@@ -90,14 +90,16 @@ I developed an understanding of:
 
 I designed a relational database structure capable of managing:
 
+* 📅 Dates
 * 👤 Customers
 * 📦 Products
 * 🧾 Sales
+* 💰 Costs
+* 🎟️ Loyalty information
 * 🏪 Inventory
 * 🚚 Suppliers
-* 🎟️ Loyalty information
 
-### 🔗 Database Relationships
+### 🔗 Database Relationships Example
 
 ```mermaid
 erDiagram
@@ -136,6 +138,8 @@ erDiagram
 ```
 
 This helped me understand how primary and foreign keys connect information stored across different tables.
+
+<img width="640" height="741" alt="image" src="https://github.com/user-attachments/assets/6d6ac0c5-88d6-4cdb-b370-7dd8b6522677" />
 
 ### 💻 SQL Query Practice
 
