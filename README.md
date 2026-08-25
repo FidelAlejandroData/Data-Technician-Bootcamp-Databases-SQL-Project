@@ -210,8 +210,7 @@ By completing this project, I developed practical experience in:
 📦 SQL-Database-Project
 ┣ 🗄️ Database exercises
 ┣ 💻 SQL queries
-┣ 🔗 JOIN exercises
-┣ 🧩 ERD / database design
+┣ 🧩 ERD / database diagram example
 ┣ 📊 Databases and SQL workbook
 ┣ 🧮 Supporting tables
 ┣ 🗃️ SQL Database Schema
