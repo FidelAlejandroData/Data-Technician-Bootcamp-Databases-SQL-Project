@@ -213,7 +213,7 @@ By completing this project, I developed practical experience in:
 ┣ 🔗 JOIN exercises
 ┣ 🧩 ERD / database design
 ┣ 📊 Databases and SQL workbook
-┣ 📁 Supporting datasets
+┣ 🧮 Supporting tables
 ┣ 🗃️ SQL Database Schema
 ┗ 📄 README.md
 ```
