@@ -208,11 +208,12 @@ By completing this project, I developed practical experience in:
 
 ```text
 📦 SQL-Database-Project
- ┣ 🗄️ Database exercises
- ┣ 💻 SQL queries
- ┣ 🔗 JOIN exercises
- ┣ 🧩 ERD / database design
- ┣ 📊 Query outputs
- ┣ 📁 Supporting datasets
- ┗ 📄 README.md
+┣ 🗄️ Database exercises
+┣ 💻 SQL queries
+┣ 🔗 JOIN exercises
+┣ 🧩 ERD / database design
+┣ 📊 Databases and SQL workbook
+┣ 📁 Supporting datasets
+┣ 🗃️ SQL Database Schema
+┗ 📄 README.md
 ```
