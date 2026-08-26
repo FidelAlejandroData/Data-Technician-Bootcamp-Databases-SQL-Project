@@ -224,9 +224,9 @@ To complement the practical SQL work completed in this project, I also completed
 ┣ 🧮 Supporting tables
 ┣ 🗃️ SQL Database Schema
 ┣ 📁 certificates
-┃ ┣ 📄 Introduction_to_SQL.pdf
-┃ ┣ 📄 Intermediate_SQL.pdf
-┃ ┣ 📄 Joining_Data_in_SQL.pdf
-┃ ┗ 📄 Data_Manipulation_in_SQL.pdf
+┃ ┣ 📄 Certificate - Introduction_to_SQL.pdf
+┃ ┣ 📄 Certificate - Intermediate_SQL.pdf
+┃ ┣ 📄Certificate -  Joining_Data_in_SQL.pdf
+┃ ┗ 📄 Certificate - Data_Manipulation_in_SQL.pdf
 ┗ 📄 README.md
 ```
