@@ -200,6 +200,15 @@ By completing this project, I developed practical experience in:
 * Query debugging
 * Extracting insights from structured data
 
+## 🏅 Related Certifications
+
+To complement the practical SQL work completed in this project, I also completed:
+
+* 🎓 [**Introduction to SQL – DataCamp**](https://www.datacamp.com/completed/statement-of-accomplishment/course/b57798930b3041fb50e37266716d97f3961bee33?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa)
+* 🎓 [**Intermediate SQL – DataCamp**](https://www.datacamp.com/completed/statement-of-accomplishment/course/99ce9a4f22474d933eba1981d06faca60d186335?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa)
+* 🎓 [**Joining Data in SQL – DataCamp**](https://www.datacamp.com/completed/statement-of-accomplishment/course/b975050579e347545d313a33f7894f7e6e8503e9?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa)
+* 🎓 [**Data Manipulation in SQL – DataCamp**](https://www.datacamp.com/completed/statement-of-accomplishment/course/bdcaed25416c3b95feb1ac0dee32adeb2efef920?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa)
+
 ## 💻 Tools I Used
 
 `SQL` `PostgreSQL` `Supabase` `Relational Databases` `ERD` `SQL JOINs` `Data Analysis`
@@ -214,5 +223,10 @@ By completing this project, I developed practical experience in:
 ┣ 📊 Databases and SQL workbook
 ┣ 🧮 Supporting tables
 ┣ 🗃️ SQL Database Schema
+┣ 📁 certificates
+┃ ┣ 📄 Introduction_to_SQL.pdf
+┃ ┣ 📄 Intermediate_SQL.pdf
+┃ ┣ 📄 Joining_Data_in_SQL.pdf
+┃ ┗ 📄 Data_Manipulation_in_SQL.pdf
 ┗ 📄 README.md
 ```
