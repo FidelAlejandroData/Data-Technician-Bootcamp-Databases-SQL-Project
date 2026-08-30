@@ -208,6 +208,7 @@ To complement the practical SQL work completed in this project, I also completed
 * 🎓 [**Intermediate SQL – DataCamp**](https://www.datacamp.com/completed/statement-of-accomplishment/course/99ce9a4f22474d933eba1981d06faca60d186335?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa)
 * 🎓 [**Joining Data in SQL – DataCamp**](https://www.datacamp.com/completed/statement-of-accomplishment/course/b975050579e347545d313a33f7894f7e6e8503e9?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa)
 * 🎓 [**Data Manipulation in SQL – DataCamp**](https://www.datacamp.com/completed/statement-of-accomplishment/course/bdcaed25416c3b95feb1ac0dee32adeb2efef920?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa)
+* 🎓 [**Introduction to Relational Databases in SQL – DataCamp**](https://www.datacamp.com/completed/statement-of-accomplishment/course/b7884778607c7c2d1f95923155e43b0b9def7c14?utm_medium=organic_social&utm_campaign=sharewidget&utm_content=soa)
 
 ## 💻 Tools I Used
 
